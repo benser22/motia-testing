@@ -1,0 +1,157 @@
+{
+  "info": {
+    "_postman_id": "motia-petstore-collection-clean",
+    "name": "Motia Petstore API (clean)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "List Pets",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/pets?status=available",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "item": [
+            {
+              "name": "List Pets",
+              "request": { "method": "GET", "header": [], "url": { "raw": "{{baseUrl}}/pets?status=available", "host": ["{{baseUrl}}"], "path": ["pets"], "query": [{ "key": "status", "value": "available" }] } },
+              "response": [ { "name": "Example 200", "originalRequest": { "method": "GET", "header": [], "url": { "raw": "{{baseUrl}}/pets?status=available" } }, "status": "200 OK", "code": 200, "body": "[{\\"id\\":\\"1\\",\\"name\\":\\"Fido\\",\\"photoUrl\\":\\"https://example.com/fido.jpg\\"}]" } ]
+            },
+            {
+              "name": "Get Pet",
+              "request": { "method": "GET", "header": [], "url": { "raw": "{{baseUrl}}/pets/:id", "host": ["{{baseUrl}}"], "path": ["pets", ":id"], "variable": [{ "key": "id", "value": "1" }] } },
+              "response": [ { "name": "Example 200", "originalRequest": { "method": "GET", "header": [], "url": { "raw": "{{baseUrl}}/pets/1" } }, "status": "200 OK", "code": 200, "body": "{\\"id\\":\\"1\\",\\"name\\":\\"Fido\\",\\"photoUrl\\":\\"https://example.com/fido.jpg\\"}" } ]
+            },
+            {
+              "name": "Create Pet",
+              "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{ \"name\": \"Fido\", \"photoUrl\": \"https://example.com/fido.jpg\" }" }, "url": { "raw": "{{baseUrl}}/pets", "host": ["{{baseUrl}}"], "path": ["pets"] } },
+              "response": [ { "name": "Example 201", "originalRequest": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw" } }, "status": "201 Created", "code": 201, "body": "{\\"id\\":\\"123\\",\\"name\\":\\"Fido\\",\\"photoUrl\\":\\"https://example.com/fido.jpg\\"}" } ]
+            },
+            {
+              "name": "Patch Pet",
+              "request": { "method": "PATCH", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{ \"name\": \"Buddy\" }" }, "url": { "raw": "{{baseUrl}}/pets/:id", "host": ["{{baseUrl}}"], "path": ["pets", ":id"], "variable": [{ "key": "id", "value": "1" }] } },
+              "response": [ { "name": "Example 200", "status": "200 OK", "code": 200, "body": "{\\"id\\":\\"1\\",\\"name\\":\\"Buddy\\",\\"photoUrl\\":\\"https://example.com/fido.jpg\\"}" } ]
+            },
+            {
+              "name": "Delete Pet",
+              "request": { "method": "DELETE", "header": [], "url": { "raw": "{{baseUrl}}/pets/:id", "host": ["{{baseUrl}}"], "path": ["pets", ":id"], "variable": [{ "key": "id", "value": "1" }] } },
+              "response": [ { "name": "Example 200", "status": "200 OK", "code": 200, "body": "{\\"message\\":\\"deleted\\"}" } ]
+            }
+            },
+              {
+                "name": "Delete All Pets",
+                "request": {
+                  "method": "DELETE",
+                  "header": [],
+                  "url": {
+                    "raw": "{{baseUrl}}/pets/delete-all",
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "path": [
+                      "pets",
+                      "delete-all"
+                    ]
+                  }
+                },
+                "response": [
+                  {
+                    "name": "Example 200",
+                    "status": "200 OK",
+                    "code": 200,
+                    "body": "{\\"message\\":\\"deleted X pets\\"}"
+                  }
+                ]
+              }
+            ],
+            }
+          },
+          "status": "200 OK",
+          "code": 200,
+          "body": "{\"id\":\"123\",\"name\":\"Fido\",\"photoUrl\":\"https://example.com/fido.jpg\"}"
+        }
+      ]
+    },
+    {
+      "name": "Patch Pet",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"Buddy\"}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/pets/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "pets",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Example 200",
+          "status": "200 OK",
+          "code": 200,
+          "body": "{\"id\":\"1\",\"name\":\"Buddy\",\"photoUrl\":\"https://example.com/fido.jpg\"}"
+        }
+      ]
+    },
+    {
+      "name": "Delete Pet",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/pets/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "pets",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Example 200",
+          "status": "200 OK",
+          "code": 200,
+          "body": "{\"message\":\"deleted\"}"
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    }
+  ]
+}

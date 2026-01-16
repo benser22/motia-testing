@@ -1,0 +1,45 @@
+[
+  {
+    "id": "basic-tutorial",
+    "config": {
+      "src\\petstore\\state-audit-cron.step.ts": {
+        "x": 126,
+        "y": -20
+      },
+      "src\\petstore\\process-food-order.step.ts": {
+        "x": 221,
+        "y": 252
+      },
+      "src\\petstore\\notification.step.ts": {
+        "x": 640,
+        "y": 53
+      },
+      "src\\petstore\\api.step.ts": {
+        "x": -128,
+        "y": 181
+      }
+    }
+  },
+  {
+    "id": "petstore-main",
+    "config": {
+      "src\\petstore\\process-new-pet.step.ts": {
+        "x": -57,
+        "y": -41
+      },
+      "src\\petstore\\list-pets-on-create.step.ts": {
+        "x": 172,
+        "y": 156
+      },
+      "src\\petstore\\flow-starter.step.ts": {
+        "x": -342,
+        "y": -163,
+        "sourceHandlePosition": "bottom"
+      },
+      "src\\petstore\\create-pet.step.ts": {
+        "x": -732,
+        "y": 55
+      }
+    }
+  }
+]

@@ -1,3 +1,8 @@
+# Ignore all dotfiles, but keep README and GitHub workflows
+.*
+!.gitignore
+!.github/
+
 node_modules
 dist
 .env
@@ -8,12 +13,13 @@ npm-debug.log
 yarn-error.log
 /.idea
 .vscode
-*.lognode_modules
+*.log
 python_modules
 .venv
 venv
 .motia
 .mermaid
-dist
 *.pyc
-.env
+.agent/
+.claude/agents/motia-developer.md
+README.md

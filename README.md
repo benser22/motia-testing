@@ -1,4 +1,28 @@
-# Motia
+# Motia (experimental)
+
+Proyecto ejemplo basado en Motia — pasos, eventos y cron.
+
+Instrucciones rápidas:
+
+- Instalar dependencias:
+
+```bash
+npm install
+```
+
+- Ejecutar en desarrollo:
+
+```bash
+npm run dev
+```
+
+- Generar tipos de Motia (si cambia la configuración):
+
+```bash
+npx motia generate-types
+```
+
+Documentación adicional en la carpeta `docs/`.# Motia
 
 This is a **Motia** project bootstrapped with the Motia CLI.
 
